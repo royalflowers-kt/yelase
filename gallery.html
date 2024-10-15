@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Royal Flowers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Gallery grid styling */
+        .gallery-container {
+            padding: 50px 0;
+            background-color: #f7f7f7;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Image grid layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 15px;
+            padding: 0 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05); /* Zoom on hover */
+        }
+
+        /* Lightbox styling */
+        .lightbox {
+            display: none; /* Hide by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox:target {
+            display: flex; /* Show when targeted */
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox a {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1 class="gallery-title">Our Beautiful Flowers</h1>
+        
+        <div class="gallery-grid">
+            <!-- Sample 21 images with links to lightbox -->
+            <a href="#lightbox1"><img src="img1.JPG" alt="Flower 1"></a>
+            <a href="#lightbox2"><img src="img2.JPG" alt="Flower 2"></a>
+            <a href="#lightbox3"><img src="img3.JPG" alt="Flower 3"></a>
+            <a href="#lightbox4"><img src="img4.JPG" alt="Flower 4"></a>
+            <a href="#lightbox5"><img src="img5.JPG" alt="Flower 5"></a>
+            <a href="#lightbox6"><img src="img6.JPG" alt="Flower 6"></a>
+            <a href="#lightbox7"><img src="img7.JPG" alt="Flower 7"></a>
+            <a href="#lightbox8"><img src="img8.JPG" alt="Flower 8"></a>
+            <a href="#lightbox9"><img src="img9.JPG" alt="Flower 9"></a>
+            <a href="#lightbox10"><img src="wa1.jpg" alt="Flower 10"></a>
+            <a href="#lightbox11"><img src="wa2.jpg" alt="Flower 11"></a>
+            <a href="#lightbox12"><img src="wa3.jpg" alt="Flower 12"></a>
+            <a href="#lightbox13"><img src="wa4.jpg" alt="Flower 13"></a>
+            <a href="#lightbox14"><img src="wa5.jpg" alt="Flower 14"></a>
+            <a href="#lightbox15"><img src="wa6.jpg" alt="Flower 15"></a>
+            <a href="#lightbox16"><img src="wa7.jpg" alt="Flower 16"></a>
+            <a href="#lightbox17"><img src="wa8.jpg" alt="Flower 17"></a>
+            <a href="#lightbox18"><img src="PPS_0935.JPG" alt="Flower 18"></a>
+            <a href="#lightbox19"><img src="PPS_0938.JPG" alt="Flower 19"></a>
+            <a href="#lightbox20"><img src="PPS_1015.JPG" alt="Flower 20"></a>
+            <a href="#lightbox21"><img src="PPS_1034.JPG" alt="Flower 21"></a>
+        </div>
+    </div>
+
+    <!-- Lightbox Links -->
+    <div class="lightbox" id="lightbox1">
+        <a href="#!" class="close">&times;</a>
+        <img src="img1.JPG" alt="Flower 1">
+    </div>
+    <div class="lightbox" id="lightbox2">
+        <a href="#!" class="close">&times;</a>
+        <img src="img2.JPG" alt="Flower 2">
+    </div>
+    <div class="lightbox" id="lightbox3">
+        <a href="#!" class="close">&times;</a>
+        <img src="img3.JPG" alt="Flower 3">
+    </div>
+    <div class="lightbox" id="lightbox4">
+        <a href="#!" class="close">&times;</a>
+        <img src="img4.JPG" alt="Flower 4">
+    </div>
+    <div class="lightbox" id="lightbox5">
+        <a href="#!" class="close">&times;</a>
+        <img src="img5.JPG" alt="Flower 5">
+    </div>
+    <div class="lightbox" id="lightbox6">
+        <a href="#!" class="close">&times;</a>
+        <img src="img6.JPG" alt="Flower 6">
+    </div>
+    <div class="lightbox" id="lightbox7">
+        <a href="#!" class="close">&times;</a>
+        <img src="img7.JPG" alt="Flower 7">
+    </div>
+    <div class="lightbox" id="lightbox8">
+        <a href="#!" class="close">&times;</a>
+        <img src="img8.JPG" alt="Flower 8">
+    </div>
+    <div class="lightbox" id="lightbox9">
+        <a href="#!" class="close">&times;</a>
+        <img src="img9.JPG" alt="Flower 9">
+    </div>
+    <div class="lightbox" id="lightbox10">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa1.jpg" alt="Flower 10">
+    </div>
+    <div class="lightbox" id="lightbox11">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa2.jpg" alt="Flower 11">
+    </div>
+    <div class="lightbox" id="lightbox12">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa3.jpg" alt="Flower 12">
+    </div>
+    <div class="lightbox" id="lightbox13">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa4.jpg" alt="Flower 13">
+    </div>
+    <div class="lightbox" id="lightbox14">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa5.jpg" alt="Flower 14">
+    </div>
+    <div class="lightbox" id="lightbox15">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa6.jpg" alt="Flower 15">
+    </div>
+    <div class="lightbox" id="lightbox16">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa7.jpg" alt="Flower 16">
+    </div>
+    <div class="lightbox" id="lightbox17">
+        <a href="#!" class="close">&times;</a>
+        <img src="wa8.jpg" alt="Flower 17">
+    </div>
+    <div class="lightbox" id="lightbox18">
+        <a href="#!" class="close">&times;</a>
+        <img src="PPS_0935.JPG" alt="Flower 18">
+    </div>
+    <div class="lightbox" id="lightbox19">
+        <a href="#!" class="close">&times;</a>
+        <img src="PPS_0938.JPG" alt="Flower 19">
+    </div>
+    <div class="lightbox" id="lightbox20">
+        <a href="#!" class="close">&times;</a>
+        <img src="PPS_1015.JPG" alt="Flower 20">
+    </div>
+    <div class="lightbox" id="lightbox21">
+        <a href="#!" class="close">&times;</a>
+        <img src="PPS_1034.JPG" alt="Flower 21">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/7S2+n1WVq6AiY2G0Ua6GTbB1rSK9/q5MQQTftb" crossorigin="anonymous"></script>
+</body>
+</html>
